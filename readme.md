@@ -2,9 +2,7 @@
 
 #### Front-end developing start template
 
-Author: [Serdar](https://github.com/creative-developer/)
-
-**Project link: [zapret-viezda](test.creativny.ru/zapret-viezda/)**
+Project link: [zapret-viezda](test.creativny.ru/zapret-viezda/)
 
 ## How to use
 
