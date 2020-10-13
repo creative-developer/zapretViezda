@@ -2,7 +2,7 @@
 
 #### Front-end developing start template
 
-Project link: [zapret-viezda](test.creativny.ru/zapret-viezda/)
+Project link: [zapret-viezda](https://test.creativny.ru/zapret-viezda)
 
 ## How to use
 
