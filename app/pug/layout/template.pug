@@ -1,0 +1,18 @@
+include _mixins
+doctype html
+html(lang="ru")
+	block head
+		- var title = 'Главная | Запрет въезда'
+	include _head
+	body
+		|
+		|
+		// Header
+		include _header
+
+		// content
+		block content
+
+		|
+		|
+		include _footer
