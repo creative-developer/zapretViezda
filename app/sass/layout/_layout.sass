@@ -2,10 +2,15 @@ body
 	min-width: 320px
 	position: relative
 	font-family: $deff
+	font-weight: normal
 	line-height: 1.65
 	overflow-x: hidden
 	-webkit-font-smoothing: antialiased
 
+::-webkit-scrollbar
+	width: 0
+	-ms-overflow-style: none
+	overflow: -moz-scrollbars-none
 
 html,
 body
@@ -20,10 +25,12 @@ body
 		// font-size: 11px
 	+sm
 
-
 ////////// Modules
 @import ./modules/buttons
 @import ./modules/typoghraphy
 @import ./modules/form
 @import ./modules/popups
 @import ./modules/mfp-zoom
+@import ./UiComponents/_all
+@import ./blocks/_all
+@import ./modules/feedback-required

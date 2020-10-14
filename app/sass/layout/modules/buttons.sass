@@ -2,13 +2,13 @@
 .btn
 	position: relative
 	display: inline-block
-	font-size: 14px
-	border-radius: 4px
+	font-size: 16px
+	line-height: 16px
 	color: #fff
 	text-align: center
 	text-decoration: none
-	padding: 10px 30px
-	background-color: $c1
+	padding: 16px 32px
+	background-color: $accent
 	border: none
 	outline: none
 	transition: all .3s ease
@@ -25,3 +25,35 @@
 
 	&.disabled
 		opacity: .4
+
+.back-btn
+	position: relative
+	display: flex
+	align-items: center
+	font-size: 14px
+	line-height: 18px
+	color: $linkColor
+	border: none
+	outline: none
+	transition: all .3s ease
+	user-select: none
+	background: transparent
+	padding: 0
+	&__icon-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 7px
+		transition: all 0.3s ease
+	svg
+		width: 8px
+		height: 14px
+		fill: $accent
+	&:focus:not(.disabled),
+	&:hover:not(.disabled)
+		outline: none
+		cursor: pointer
+		text-decoration: none
+		.back-btn
+			&__icon-wrap
+				transform: translateX(-2px)

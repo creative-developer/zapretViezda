@@ -1,0 +1,81 @@
+.panel
+	display: flex
+	flex-direction: column
+	padding: 28px 32px
+	height: 100%
+	background: #fff
+	box-shadow: $bxShadow
+
+	&__form
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 100%
+	&__header
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		padding-bottom: 23px
+		border-bottom: 1px solid #D9D9DE
+		margin-bottom: 24px
+
+	&__body
+
+	&__footer
+		display: flex
+		align-items: center
+
+	&__steps
+
+	&__step
+		&--third
+			margin-top: -6px
+
+	&__select
+		margin-bottom: 24px
+
+	&__title
+		margin-bottom: 0
+
+	&__info-title
+		font-size: 14px
+		line-height: 18px
+		color: $gray
+		&-wrap
+			display: flex
+			align-items: center
+			sup
+				top: -6px
+				left: -9px
+				font-size: 14px
+				line-height: 18px
+				color: $warningColor
+
+	&__feedback-required
+		margin-bottom: 24px
+
+	&__fields
+		margin-bottom: 26px
+
+	&__input
+		&:not(:last-child)
+			margin-bottom: 24px
+
+	&__agreement
+		width: 100% !important
+
+	&__next-btn
+		margin-right: 26px
+
+	&__back-btn
+		width: 100% !important
+
+	.owl-carousel
+		.owl-stage-outer
+			// overflow-x: visible !important
+			.owl-item
+				padding: 0 1px
+				// visibility: hidden
+	// 		.owl-item
+	// 			&.active
+	// 				visibility: visible

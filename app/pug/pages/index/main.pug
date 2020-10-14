@@ -1,1 +1,130 @@
 section.b-main
+	.container
+		h1._title Проверить запрет на выезд за границу онлайн
+		._desc
+			p Проверить и узнать наличие запрета на выезд за границу, граждане России могут через специальный онлайн-сервис реестра запрета
+		.row._row
+			._col.-left
+				.b-panel
+					form._form
+						._wrap
+							._header
+								h4._title
+									span._step-number 1
+									| /3 
+									span._step-text СВЕДЕНИЯ О ЗАЯВИТЕЛЕ
+									ul._steps-title-list(style="display: none")
+										li СВЕДЕНИЯ О ЗАЯВИТЕЛЕ
+										li ДАННЫЕ ДЛЯ ОТПРАВКИ ОТЧЁТА
+										li ИНФОРМАЦИЯ О ПРОВЕРКЕ
+								._info-title-wrap
+									._info-title Обязательные поля
+							._body
+								._steps.owl-carousel
+									._step.-first
+										.b-select-wrap._select
+											select(name="region" data-placeholder="Выберите регион" data-search-not-found="Совпадений не найдено")
+												option
+												option Алтайский край
+												option Архангельская область и Ненецкий автономный округ
+												option Белгородская область
+												option Забайкальский край
+												option Калужская область
+										._fields
+											.b-input._input
+												input(type='text' name='fullName' data-name='fullName' placeholder='Ф.И.О полностью')
+											.b-input.-birth-date._input
+												input(type='text' name='birthDate' placeholder='ДД.ММ.ГГГГ' data-toggle='datepicker' autocomplete='off')
+												._icon-wrap
+													+icon('calendar')
+											.b-input._input
+												input(type='text' name='passportSeries' data-name='passportSeries' placeholder='Серия и номер паспорта')
+									._step.-second
+										.b-input._input
+											input(type='email' name='email' data-name='email' placeholder='Укажите email')
+										.b-feedback-required._feedback-required
+											._text Выслать в SMS:
+											label.b-checkbox.-btn._checkbox
+												input._input(type='checkbox' name='feedback')
+												span._icon-wrap
+													+icon('check')
+												._text Выслать бесплатное SMS
+										.b-input._input
+											input(type='text' name='phone' data-name='phone' placeholder='Укажите телефон')
+									._step.-third
+										.b-steps-result
+											._title-wrap
+												h3._title Стоимость запроса, согласно тарифам:
+												._sub-title Услуга платная, комиссия 0%, выполнение 10 минут
+											._price
+												span 190
+												| руб.
+										.b-select-wrap._select
+											select(name="pay_method" data-placeholder="Выберите способ оплаты" data-search-not-found="Совпадений не найдено")
+												option
+												option Банковская карта (VISA/Mastercard)
+										.b-input.-result._input
+											input(type='text' name='result' data-name='result' value='Акулова Татьяна Ивановна 2020 г.р' readonly disabled)
+
+
+						._footer
+							button.b-btn._next-btn.js-next(type="button" data-submit-text="Перейти к оплате") Далее
+							._right-content-wrap
+								.b-agreement._agreement
+									label.b-checkbox.-start._checkbox
+										input._input(type='checkbox' name="agreement" required)
+										span._icon-wrap
+											+icon('check')
+										span._text Соглашаюсь с правилами пользования сайта и <a href='#'>правилами обработки</a> персональных данных
+								button.b-back-btn._back-btn.js-back(type="button" style="display: none")
+									._icon-wrap
+										+icon('oval-arrow')
+									._text Назад
+
+
+			._col.-right
+				.b-statistic-panel
+					h4._title Статистика ФССП
+					ul.b-statistic-list._statistic-list
+						li._item
+							._icon-wrap
+								+icon('ruble')
+							._title Задолженностей на сумму 
+								b - 12 трлн рублей
+						li._item
+							._icon-wrap
+								+icon('user')
+							._title Всего не выездных граждан
+								b - 1 134 505 человек
+						li._item
+							._icon-wrap
+								+icon('file')
+							._title Не действительные паспорта
+								b - 5 601 человек
+						li._item
+							._icon-wrap
+								+icon('debt')
+							._title Судебные задолженности
+								b - 456 959 рублей
+					ul.b-db-list._db-list
+						li._item
+							._icon-wrap
+								img._icon(src="img/db-icons/fssp.png" alt="")
+							._text ФССП
+						li._item
+							._icon-wrap
+								img._icon(src="img/db-icons/mvd.png" alt="")
+							._text МВД
+						li._item
+							._icon-wrap
+								img._icon(src="img/db-icons/fns.png" alt="")
+							._text ФНС
+						li._item
+							._icon-wrap
+								img._icon(src="img/db-icons/ufms.png" alt="")
+							._text УФМС
+						li._item
+							._icon-wrap
+								img._icon(src="img/db-icons/ps.png" alt="")
+							._text ПС
+					._text Данные собираются по базам гос. огранов

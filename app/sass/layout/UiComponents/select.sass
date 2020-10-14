@@ -1,0 +1,127 @@
+// Custom select
+.select-wrap
+	position: relative
+	width: 100%
+	// height: 48px
+	select.error
+		& + .jq-selectbox__select
+			border-color: $warningColor
+			color: $warningColor
+
+.jq-selectbox
+	// position: absolute
+	// top: 0
+	// left: 0
+	// height: 42px
+	height: 100% !important
+	width: 100%
+	transition: all .3s ease
+	&.opened
+		// box-shadow: 0px 1px 5.8px 0.2px rgba(0, 0, 0, 0.4)
+		.jq-selectbox
+			&__select
+				// border-color: transparent
+				// border-bottom: 0
+				// background: $bg
+				// padding: 15.5px 25px 15.5px 16px
+
+	&__select
+		display: flex
+		align-items: center
+		justify-content: space-between
+		// height: 42px
+		font-size: 16px
+		line-height: 16px
+		color: $c1
+		background: #fff
+		overflow: hidden
+		border-radius: 0
+		padding: 15px 25px 15px 16px
+		border: 1px solid $inputBorder
+		cursor: pointer
+		transition: all .3s ease
+		&-text
+			&.placeholder
+				color: $gray
+
+	&__trigger
+		display: flex
+		align-items: center
+		justify-content: center
+		// width: 44px
+		// height: 42px
+		cursor: pointer
+		z-index: 1
+		svg
+			width: 18px
+			height: 9px
+			fill: $inputBorder
+		&:hover
+			// .jq-selectbox__trigger-arrow
+			// 	border-top-color: darken(#b4b4b4, 15%)
+
+	&__dropdown
+		top: 47px
+		width: 100%
+		font-size: 14px
+		line-height: 18px
+		padding: 0
+		background: $bg
+		ul
+			max-height: 188px !important
+			padding: 10px 0
+			border-radius: 4px
+			border: 1px solid $inputBorder
+			border-top: 0
+			border-top-left-radius: 0
+			border-top-right-radius: 0
+			li
+				position: relative
+				padding: 7px 24px
+				cursor: pointer
+				transition: all .3s ease
+				&:after
+					content: ''
+					position: absolute
+					top: 50%
+					left: 5px
+					transform: translateY(-50%)
+					width: 7px
+					height: 7px
+					background: url('../img/icons/selected.svg') no-repeat center center
+					opacity: 0
+					transition: all 0.3s ease
+				&:hover
+					background: $accent
+					color: #fff
+				&.sel
+					&:after
+						opacity: 1
+
+	&__search
+		position: absolute
+		top: -47px
+		left: 0
+		width: 100%
+		input
+			border: none
+			display: flex
+			align-items: center
+			justify-content: space-between
+			// height: 42px
+			font-size: 16px
+			line-height: 16px
+			color: $c1
+			background: $bg
+			overflow: hidden
+			border-radius: 0
+			padding: 13px 16px
+			border: 1px solid $inputBorder
+			cursor: pointer
+			transition: all .3s ease
+			border-bottom: 0
+
+	&__not-found
+		padding: 10px 24px
+		border-right: 1px solid $inputBorder
+		border-left: 1px solid $inputBorder

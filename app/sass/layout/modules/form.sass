@@ -6,15 +6,57 @@ input,
 textarea
 	width: 100%
 	font-size: 16px
-	color: $c0
-	padding: 5px 10px
-	border: 1px solid #999
+	line-height: 16px
+	color: $c1
+	padding: 13px 16px
+	background: #fff
+	border: 1px solid $inputBorder
 	transition: all .3s ease
+	&.valid
+		border-color: green
+		color: green
+	&.error
+		border-color: $warningColor
+		color: $warningColor
 	&:focus
 		outline: none
 		border-color: $c1
 	&:disabled
-		background: #fff
+		background: #E5E5EB
+		opacity: 0.5
+		// color: $c1 !important
+		// border-color: $inputBorder !important
 
 ::placeholder
-	color: #999
+	color: $gray
+
+.input
+	position: relative
+	// &--required
+	// 	sup
+	// 		font-size: 14px
+	// 		line-height: 18px
+	// 		color: $warningColor
+			// position: absolute
+			// top: 0
+			// right: -15px
+	&--result
+		input
+			background: #E5E5EB
+			opacity: 1
+
+	&--birth-date
+		.input
+			&__icon-wrap
+				position: absolute
+				top: 50%
+				right: 26px
+				transform: translateY(-50%)
+				display: flex
+				justify-content: center
+				align-items: center
+				cursor: pointer
+				svg
+					width: 20px
+					height: 22px
+					fill: $inputBorder
