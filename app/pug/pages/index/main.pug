@@ -62,7 +62,7 @@ section.b-main
 										.b-select-wrap._select
 											select(name="pay_method" data-placeholder="Выберите способ оплаты" data-search-not-found="Совпадений не найдено")
 												option
-												option Банковская карта (VISA/Mastercard)
+												option(selected) Банковская карта (VISA/Mastercard)
 										.b-input.-result._input
 											input(type='text' name='result' data-name='result' value='Акулова Татьяна Ивановна 2020 г.р' readonly disabled)
 
@@ -72,7 +72,7 @@ section.b-main
 							._right-content-wrap
 								.b-agreement._agreement
 									label.b-checkbox.-start._checkbox
-										input._input(type='checkbox' name="agreement" required)
+										input._input(type='checkbox' name="agreement" required checked)
 										span._icon-wrap
 											+icon('check')
 										span._text Соглашаюсь с правилами пользования сайта и <a href='#'>правилами обработки</a> персональных данных
