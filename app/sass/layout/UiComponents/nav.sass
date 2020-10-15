@@ -1,11 +1,22 @@
 .nav
+	&--big
+		.nav
+			&__link
+				font-size: 18px
+				line-height: 24px
+			&__item
+				&:not(:last-child)
+					margin-right: 33px
+
 	&__list
 		display: flex
 		align-items: center
+
 	&__item
 		&:not(:last-child)
 			margin-right: 24px
+
 	&__link
-		color: #0050B2
+		color: $linkColor
 		font-size: 14px
 		line-height: 18px
