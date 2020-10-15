@@ -1,12 +1,14 @@
 .info-list
 	padding-left: 25px
+	&--small
+		.info-list
+			&__item
+				&:not(:last-child)
+					margin-bottom: 0
 
 	&__item
-		font-size: 14px
-		line-height: 18px
-		color: $c1
+		&:not(:last-child)
+			margin-bottom: 18px
 		p
 			font-size: 14px
 			line-height: 18px
-		&:not(:last-child)
-			margin-bottom: 18px

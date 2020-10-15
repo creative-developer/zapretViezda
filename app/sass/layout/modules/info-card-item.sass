@@ -1,0 +1,36 @@
+.info-card-item
+	display: flex
+	flex-direction: column
+	height: 100%
+	padding: 23px 32px 28px
+	background: #fff
+	box-shadow: $bxShadow
+
+	&__top-line
+		display: flex
+		align-items: flex-start
+		padding-bottom: 15px
+		border-bottom: 1px solid $bdColor
+		margin-bottom: 24px
+
+	&__icon-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 20px
+		height: 20px
+		min-width: 20px
+		min-height: 20px
+		margin-right: 14px
+		margin-top: 5px
+		svg
+			fill: $gray
+
+	&__title
+		font-weight: normal
+	&__content
+	&__desc
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 24px
