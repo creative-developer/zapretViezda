@@ -9,11 +9,15 @@ const breakpoints = {
 }
 const MQ = $.mq.action
 
-// MQ(xl, function () {
-// 	$('.advantages__bottom-content').append($('.warning-text--blue'));
-// }, function () {
-// 	$('.advantages__col--right').append($('.warning-text--blue'));
-// });
+MQ(
+  breakpoints.lg,
+  () => {
+    $('.mobile-menu .container').append($('.nav--header'))
+  },
+  () => {
+    $('.header__col--right').append($('.nav--header'))
+  },
+)
 ////////// Common functions
 
 // Popup opener
@@ -27,7 +31,7 @@ $('.js-popup').click(function (event) {
 // Mobile menu toggle
 $('.js-menu').click(function () {
   $(this).toggleClass('is-active')
-  $('.nav').toggleClass('opened')
+  $('.mobile-menu').toggleClass('opened')
 })
 
 // Validate all form in site
@@ -335,28 +339,4 @@ const smartScrolling = () => {
 if ($('.faq').length) {
   smartScrolling()
   $(window).scroll(smartScrolling)
-}
-
-/////////// mfp popup - https://dimsemenov.com/plugins/magnific-popup/
-let mfpPopup = function (popupID, source) {
-  $.magnificPopup.open({
-    items: {
-      src: popupID,
-    },
-    type: 'inline',
-    fixedContentPos: false,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    closeMarkup: '<button type="button" class="mfp-close">&times;</button>',
-    mainClass: 'mfp-fade-zoom',
-    // callbacks: {
-    // 	open: function() {
-    // 		$('.source').val(source);
-    // 	}
-    // }
-  })
 }

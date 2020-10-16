@@ -5,6 +5,8 @@
 	height: 100%
 	background: #fff
 	box-shadow: $bxShadow
+	+lg
+		padding: 24px
 
 	&__form
 		display: flex
@@ -25,22 +27,30 @@
 	&__footer
 		display: flex
 		align-items: center
+		+md
+			flex-direction: column
 
 	&__steps
 
 	&__step
 		&--third
-			margin-top: -6px
+			+min_md
+				margin-top: -6px
 
 	&__select
 		margin-bottom: 24px
 
 	&__title
 		margin-bottom: 0
+		+sm
+			font-size: 15px
+			line-height: 20px
 
 	&__info-title
 		color: $gray
 		width: 100% !important
+		+md
+			display: none !important
 		&-wrap
 			display: flex
 			align-items: center
@@ -59,7 +69,11 @@
 		width: 100% !important
 
 	&__next-btn
-		margin-right: 26px
+		+md
+			width: 100%
+			margin-bottom: 16px
+		+min_md
+			margin-right: 26px
 
 	&__back-btn
 		width: 100% !important

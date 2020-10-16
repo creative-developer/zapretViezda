@@ -6,7 +6,6 @@
 	select.error
 		& + .jq-selectbox__select
 			border-color: $warningColor
-			color: $warningColor
 
 .jq-selectbox
 	// position: absolute
@@ -16,6 +15,7 @@
 	height: 100% !important
 	width: 100%
 	transition: all .3s ease
+	max-width: 100%
 	&.opened
 		// box-shadow: 0px 1px 5.8px 0.2px rgba(0, 0, 0, 0.4)
 		.jq-selectbox
@@ -24,6 +24,9 @@
 				// border-bottom: 0
 				// background: $bg
 				// padding: 15.5px 25px 15.5px 16px
+			&__trigger
+				svg
+					transform: rotate(-180deg)
 
 	&__select
 		display: flex
@@ -40,6 +43,13 @@
 		border: 1px solid $inputBorder
 		cursor: pointer
 		transition: all .3s ease
+		max-width: 100%
+		&:hover
+			border-color: $accent
+		+lg
+			font-size: 14px
+			line-height: 14px
+			padding: 16px 25px 16px 16px
 		&-text
 			&.placeholder
 				color: $gray
@@ -56,6 +66,7 @@
 			width: 18px
 			height: 9px
 			fill: $inputBorder
+			transition: all 0.3s ease
 		&:hover
 			// .jq-selectbox__trigger-arrow
 			// 	border-top-color: darken(#b4b4b4, 15%)
@@ -67,6 +78,7 @@
 		line-height: 18px
 		padding: 0
 		background: $bg
+		max-width: 100%
 		ul
 			max-height: 188px !important
 			padding: 10px 0
@@ -80,6 +92,8 @@
 				padding: 7px 24px
 				cursor: pointer
 				transition: all .3s ease
+				overflow: hidden
+				text-overflow: ellipsis
 				&:after
 					content: ''
 					position: absolute
@@ -115,11 +129,15 @@
 			background: $bg
 			overflow: hidden
 			border-radius: 0
-			padding: 13px 16px
+			padding: 13.5px 16px
 			border: 1px solid $inputBorder
 			cursor: pointer
 			transition: all .3s ease
 			border-bottom: 0
+			+lg
+				font-size: 14px
+				line-height: 14px
+				padding: 15px 16px
 
 	&__not-found
 		padding: 10px 24px

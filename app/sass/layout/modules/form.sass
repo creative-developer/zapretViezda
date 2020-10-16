@@ -12,12 +12,16 @@ textarea
 	background: #fff
 	border: 1px solid $inputBorder
 	transition: all .3s ease
+	+lg
+		font-size: 14px
+		line-height: 14px
+		padding: 14.5px 16px
 	&.valid
-		border-color: green
-		color: green
+		border: 1px solid $inputBorder
 	&.error
 		border-color: $warningColor
-		color: $warningColor
+	&:hover
+		border-color: $accent
 	&:focus
 		outline: none
 		border-color: $c1

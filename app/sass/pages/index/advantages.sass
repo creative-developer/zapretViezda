@@ -3,6 +3,9 @@
 	background: $bg
 	padding: 56px 0 2px 0
 	z-index: 1
+	+lg
+		padding: 24px 0 0
+
 	&:after
 		content: ''
 		position: absolute
@@ -18,3 +21,7 @@
 		padding: 0 $grid-padding
 		// margin-bottom: 32px
 		margin-bottom: 39px
+		+lg
+			flex-basis: 100%
+			max-width: 100%
+			margin-bottom: 24px

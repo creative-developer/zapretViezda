@@ -1,8 +1,14 @@
 .feedback-required
 	display: flex
 	align-items: center
+	+md
+		flex-direction: column
+		align-items: flex-start
 	&__text
 		font-size: 14px
 		line-height: 18px
 		color: $c1
-		margin-right: 16px
+		+min_md
+			margin-right: 16px
+		+md
+			margin-bottom: 16px

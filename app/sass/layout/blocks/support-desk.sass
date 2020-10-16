@@ -5,14 +5,26 @@
 	overflow: hidden
 	padding: 23px 31px 27px 0
 	box-shadow: $bxShadow
+	+md
+		position: relative
+		padding: 24px 24px 24px 24px
 
 	&__icon-wrap
-		width: 90px
-		height: 81px
-		min-width: 90px
-		min-height: 81px
-		margin-left: -24px
-		margin-right: 33px
+		+min_md
+			width: 90px
+			height: 81px
+			min-width: 90px
+			min-height: 81px
+			margin-right: 33px
+			margin-left: -24px
+		+md
+			width: 61px
+			height: 55px
+			min-width: 61px
+			min-height: 55px
+			position: absolute
+			top: 16px
+			right: 24px
 		svg
 			width: 100%
 			height: 100%
@@ -22,7 +34,17 @@
 		font-size: 22px
 		line-height: 28px
 		color: $c0
+		+md
+			font-size: 18px
+			line-height: 24px
+			max-width: 350px
+		+sm
+			max-width: 340px
+		@media only screen and (max-width: 460px)
+			max-width: 280px
 
 	&__link
 		color: $linkColor
 		margin-left: 7px
+		+md
+			margin-left: 5px

@@ -1,28 +1,48 @@
 .footer
 	padding: 56px 0 39px
+	+lg
+		padding: 32px 0
 
 	&__row
 		align-items: center
 
 	&__col
-		flex-basis: 33.333%
-		max-width: 33.333%
+		flex-basis: 33.33%
+		max-width: 33.33%
 		padding: 0 $grid-padding
+		+lg
+			flex-basis: 100%
+			max-width: 100%
 		&--left
-			flex-basis: 33.33%
-			max-width: 33.33%
+			+min_lg
+				flex-basis: 33.33%
+				max-width: 33.33%
+			+lg
+				order: 2
 		&--right
-			flex-basis: 66.66%
-			max-width: 66.66%
-		// &--first
-		// 	flex-basis: 33.333%
-		// 	max-width: 33.333%
-		// &--center
-		// 	flex-basis: 33.3%
-		// 	max-width: 33.3%
-		// &--last
-		// 	flex-basis: 33.333%
-		// 	max-width: 33.333%
+			+min_lg
+				flex-basis: 66.66%
+				max-width: 66.66%
+			+lg
+				order: 1
+				margin-bottom: 27px
+		&--first
+			+lg
+				order: 3
+		&--center
+			+min_lg
+				+xl
+					flex-basis: 27.5%
+					max-width: 27.5%
+			+lg
+				order: 2
+		&--last
+			+min_lg
+				+xl
+					flex-basis: 39.17%
+					max-width: 39.17%
+			+lg
+				order: 1
 
 	&__top-line
 		border-bottom: 1px solid $bdColor
@@ -32,19 +52,29 @@
 	&__bottom-line
 
 	&__info-text
-		margin-left: 70px
 		color: $gray
+		+min_lg
+			margin-left: 70px
+		// +lg
+		// 	margin-top: 16px
 
 	&__link
 		display: inline-block
 		font-size: 14px
 		line-height: 18px
 		color: $linkColor
+		&:not(:last-child)
+			+lg
+				margin-bottom: 8px
 
 	&__links-wrap
 		display: flex
 		flex-direction: column
+		+lg
+			margin-bottom: 16px
 
 	&__social-wrap
 		display: flex
 		justify-content: space-between
+		+lg
+			margin-bottom: 24px

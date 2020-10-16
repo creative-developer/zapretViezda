@@ -5,8 +5,13 @@
 	padding: 23px 32px 28px
 	background: #fff
 	box-shadow: $bxShadow
+	+lg
+		padding: 24px 24px 28px
 	&--wide
 		padding: 23px 32px 13px
+		+lg
+			padding: 24px 24px 13px
+
 		.info-card-item
 			&__desc
 				margin-bottom: 24px
@@ -36,7 +41,10 @@
 
 	&__title
 		font-weight: normal
-	&__content
+		+lg
+			br
+				display: none
+
 	&__desc
 		p
 			margin-bottom: 0

@@ -1,20 +1,24 @@
 .nav
 	&--big
 		.nav
-			&__link
-				font-size: 18px
-				line-height: 24px
+			&__list
+				+xl
+					// justify-content: flex-end
 			&__item
 				&:not(:last-child)
-					margin-right: 33px
+					+min_lg
+						margin-right: 33px
+						+xl
+							margin-right: 24px
+					+lg
+						margin-bottom: 9px
+			&__link
+				+min_lg
+					font-size: 18px
+					line-height: 24px
+					+xl
+						font-size: 16px
 	&--header
-		position: absolute
-		top: 0
-		left: 50%
-		transform: translateX(-50%)
-		width: 100%
-		height: 100%
-		background: #fff
 
 	&__list
 		display: flex
@@ -23,10 +27,19 @@
 			flex-direction: column
 			align-items: flex-start
 	&__item
+		&--active
+			.nav__link
+				text-decoration: underline
+
 		&:not(:last-child)
-			margin-right: 24px
+			+min_lg
+				margin-right: 24px
+			+lg
+				margin-bottom: 16px
 
 	&__link
 		color: $linkColor
 		font-size: 14px
 		line-height: 18px
+		&:hover
+			text-decoration: underline

@@ -24,7 +24,7 @@ const { watch, src, dest, parallel } = require('gulp'),
 function jsLibs() {
   return src([
     'app/libs/jquery/dist/jquery.min.js',
-    'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+    // 'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
     'app/libs/owl.carousel/dist/owl.carousel.min.js',
     'app/libs/datepicker/dist/datepicker.min.js',
     'app/libs/jQueryFormStyler/jquery.formstyler.min.js',
@@ -42,7 +42,7 @@ function jsLibs() {
 // css libs
 function cssLibs() {
   return src([
-    'app/libs/magnific-popup/dist/magnific-popup.css',
+    // 'app/libs/magnific-popup/dist/magnific-popup.css',
     'app/libs/owl.carousel/dist/assets/owl.carousel.min.css',
     'app/libs/datepicker/dist/datepicker.min.css',
     'app/libs/jQueryFormStyler/jquery.formstyler.css',

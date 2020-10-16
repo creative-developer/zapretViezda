@@ -1,5 +1,5 @@
 body
-	min-width: 320px
+	min-width: 375px
 	position: relative
 	font-family: $deff
 	font-weight: normal
@@ -16,13 +16,13 @@ html,
 body
 	font-size: 16px
 	+xxl
-		// font-size: 15px
+		font-size: 15px
 	+xl
-		// font-size: 14px
+		font-size: 14px
 	+lg
-		// font-size: 12px
+		font-size: 12px
 	+md
-		// font-size: 11px
+		font-size: 11px
 	+sm
 .section
 	position: relative
@@ -32,18 +32,33 @@ body
 	z-index: 1
 	// height: calc( 100vh - 211px)
 	height: calc( 100vh - 312px)
+	+lg
+		padding: 32px 0
+		height: 100%
 	+h800
 		height: 100%
 	&:after
 		content: ''
 		position: absolute
-		top: 67px
-		right: -63px
-		width: 1006px
-		height: 1085px
+		top: 4.1875rem
+		right: -3.9375rem
+		width: 62.875rem
+		height: 67.8125rem
 		background: url('../img/logo/bg-logo.png') no-repeat
+		background-size: cover
 		z-index: -1
+		+lg
+			background-position: center center
+			right: auto
+			top: 0
+			left: 50%
+			width: 100%
+			height: 100%
+			transform: translateX(-50%)
 
+.link
+	&:hover
+		text-decoration: underline
 ////////// Modules
 @import ./modules/buttons
 @import ./modules/typoghraphy

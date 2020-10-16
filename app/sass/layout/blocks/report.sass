@@ -1,17 +1,24 @@
 .report
 	padding-top: 13px
+	+lg
+		padding-top: 32px
 
 	&__wrap
 		display: flex
 		flex-direction: column
 		align-items: center
-		margin-left: 92px
+		+min_lg
+			margin-left: 92px
 
 	&__img-wrap
-		margin-bottom: 17px
+		+min_sm
+			margin-bottom: 17px
 
 	&__watch-link
 		color: $linkColor
+		+sm
+			display: none
+
 	&__icon
 		&-wrap
 			width: 24px

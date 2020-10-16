@@ -25,6 +25,8 @@ img
 h1, h2, h3, h4, h5, h6
 	font-weight: 500
 	color: $c0
+	+lg
+		font-weight: normal
 	// font-family: inherit
 	// line-height: 1.1
 	// font-weight: 600
@@ -33,12 +35,36 @@ h1, h2, h3, h4, h5, h6
 h1
 	font-size: 44px
 	line-height: 60px
+	+lg
+		font-size: 36px
+		line-height: 42px
+	+lg
+		font-size: 30px
+		line-height: 36px
+	+sm
+		font-size: 22px
+		line-height: 28px
 h2
 	font-size: 30px
 	line-height: 36px
+	+lg
+		font-size: 24px
+		line-height: 32px
+	+md
+		font-size: 20px
+		line-height: 28px
+	+sm
+		font-size: 18px
+		line-height: 24px
 h3
 	font-size: 22px
 	line-height: 28px
+	+lg
+		font-size: 20px
+		line-height: 24px
+	+sm
+		font-size: 18px
+		line-height: 24px
 h4
 	font-size: 18px
 	line-height: 24px
@@ -52,6 +78,9 @@ p
 	color: $c1
 	font-size: 16px
 	line-height: 24px
+	+sm
+		font-size: 14px
+		line-height: 18px
 
 .small-desc
 	font-size: 14px

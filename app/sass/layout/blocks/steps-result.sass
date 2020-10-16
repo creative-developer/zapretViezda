@@ -3,6 +3,16 @@
 	justify-content: space-between
 	&__title
 		margin-bottom: 3px
+		+md
+			display: none
+		&--mobile
+			font-size: 18px
+			line-height: 24px
+			display: block
+			margin-bottom: 10px
+			+min_md
+				display: none
+
 		&-wrap
 			margin-bottom: 29px
 
@@ -13,3 +23,7 @@
 		font-size: 22px
 		line-height: 28px
 		color: $c0
+		+md
+			font-size: 18px
+			line-height: 22px
+			margin-left: 15px
