@@ -8,29 +8,6 @@ let breakpoints = {
   xsm: 375,
 }
 
-// Media quares
-let MQ = {
-  wWidth: 0,
-  isXL: false,
-  isLG: false,
-  isMD: false,
-  isSM: false,
-  isXSM: false,
-  updateState: function () {
-    this.wWidth = $(window).width()
-
-    for (let key in breakpoints) {
-      this['is' + key.toUpperCase()] = this.wWidth <= breakpoints[key]
-    }
-  },
-}
-
-MQ.updateState()
-
-$(window).on('resize', function () {
-  MQ.updateState()
-})
-
 ////////// Common functions
 
 // Popup opener
@@ -308,9 +285,51 @@ datePickerSelector
 
 $('.input__icon-wrap').on('click', function (e) {
   e.stopPropagation()
-  // datePickerSelector.datepicker('hide')
   $(this).siblings().focus()
 })
+
+$('.js-scroll').click(function (e) {
+  e.preventDefault()
+  const attr = $(this).attr('href').replace('#', '')
+  const el = $(`[data-id=${attr}]`)
+  const headerHeight = 20
+
+  if (el.length) {
+    const position = el.offset().top - headerHeight
+    $('body, html').animate({ scrollTop: position }, 700)
+
+    return false
+  }
+})
+
+const smartScrolling = () => {
+  const headerHeight = 20
+  const scrollTop = $(window).scrollTop()
+  const nav = $('.faq-nav')
+  const containerTopPosition = $('.faq__row').offset().top - headerHeight
+  const containerHeight = $('.faq__wrap').outerHeight()
+  const navHeight = nav.outerHeight()
+  const stopPosition = containerHeight - navHeight
+
+  if (scrollTop > containerTopPosition) {
+    nav.addClass('scrolled')
+  } else {
+    nav.removeClass('scrolled')
+  }
+
+  if (scrollTop > stopPosition + containerTopPosition) {
+    nav.css('top', stopPosition)
+    nav.css('position', 'absolute')
+  } else {
+    nav.css('position', 'fixed')
+    nav.removeAttr('style')
+  }
+}
+
+if ($('.faq').length) {
+  smartScrolling()
+  $(window).scroll(smartScrolling)
+}
 
 /////////// mfp popup - https://dimsemenov.com/plugins/magnific-popup/
 let mfpPopup = function (popupID, source) {
