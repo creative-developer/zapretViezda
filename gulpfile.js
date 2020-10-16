@@ -29,6 +29,7 @@ function jsLibs() {
     'app/libs/datepicker/dist/datepicker.min.js',
     'app/libs/jQueryFormStyler/jquery.formstyler.min.js',
     'app/libs/jquery-validation/dist/jquery.validate.min.js',
+    'app/libs/jQuery-Plugin-For-matchMedia-API/dist/jquery.matchMedia.js',
     // 'app/libs/fancybox/dist/jquery.fancybox.min.js',
     'app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js',
   ])

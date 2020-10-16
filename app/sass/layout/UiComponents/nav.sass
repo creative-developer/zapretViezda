@@ -7,11 +7,21 @@
 			&__item
 				&:not(:last-child)
 					margin-right: 33px
+	&--header
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		width: 100%
+		height: 100%
+		background: #fff
 
 	&__list
 		display: flex
 		align-items: center
-
+		+lg
+			flex-direction: column
+			align-items: flex-start
 	&__item
 		&:not(:last-child)
 			margin-right: 24px

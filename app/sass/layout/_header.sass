@@ -4,6 +4,27 @@
 	background: #FFFFFF
 	box-shadow: $bxShadow
 	z-index: 2
+
 	&__row
 		justify-content: space-between
 		align-items: center
+
+	&__col
+		padding: $grid-padding
+		&--left
+			flex-basis: 35%
+			max-width: 35%
+			+lg
+				flex-basis: 50%
+				max-width: 50%
+		&--right
+			display: flex
+			justify-content: flex-end
+			flex-basis: 65%
+			max-width: 65%
+			+lg
+				flex-basis: 50%
+				max-width: 50%
+	&__nav
+		+lg
+			// display: none

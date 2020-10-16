@@ -1,13 +1,19 @@
 ////////// Responsive
 // Breackpoints
-let breakpoints = {
-  xl: 1200,
-  lg: 992,
-  md: 768,
-  sm: 576,
-  xsm: 375,
+const breakpoints = {
+  xl: '(max-width: 1199px)',
+  lg: '(max-width: 991px)',
+  md: '(max-width: 767px)',
+  sm: '(max-width: 575px)',
+  xsm: '(max-width: 374px)',
 }
+const MQ = $.mq.action
 
+// MQ(xl, function () {
+// 	$('.advantages__bottom-content').append($('.warning-text--blue'));
+// }, function () {
+// 	$('.advantages__col--right').append($('.warning-text--blue'));
+// });
 ////////// Common functions
 
 // Popup opener
@@ -21,7 +27,7 @@ $('.js-popup').click(function (event) {
 // Mobile menu toggle
 $('.js-menu').click(function () {
   $(this).toggleClass('is-active')
-  $('.menu').toggleClass('opened')
+  $('.nav').toggleClass('opened')
 })
 
 // Validate all form in site

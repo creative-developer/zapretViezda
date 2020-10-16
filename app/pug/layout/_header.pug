@@ -1,13 +1,13 @@
 header.b-header
 	.container
 		.row._row
-			.col
+			._col.-left
 				a.b-logo(href="index.html")
 					span._img-wrap
 						img._img(src="img/logo/logo.png" alt="")
 					span._text.small-desc Онлайн-сервис проверки запрета на выезд из РФ 
-			.col
-				nav.b-nav
+			._col.-right
+				nav.b-nav.-header._nav
 					ul._list
 						li._item
 							a._link(href="#") Проверить запрет на выезд
@@ -17,3 +17,6 @@ header.b-header
 							a._link(href="about.html") О компании
 						li._item
 							a._link(href="support.html") Поддержка
+				button.b-hamburger.-slider.js-menu(type='button')
+					span.hamburger-box
+						span.hamburger-inner
